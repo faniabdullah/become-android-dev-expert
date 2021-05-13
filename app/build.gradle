@@ -12,11 +12,11 @@ android {
 
     defaultConfig {
         applicationId "com.bangkit.faniabdullah_made"
+        buildConfigField("String", "MOVIE_TOKEN", '"a47cb9807be41e08642f343ad7b87d9b"')
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -56,6 +56,10 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
 
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"

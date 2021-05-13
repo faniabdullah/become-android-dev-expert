@@ -1,10 +1,10 @@
-package com.bangkit.faniabdullah_made.notifications
+package com.bangkit.faniabdullah_made.favorite_movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class FavoriteViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"
