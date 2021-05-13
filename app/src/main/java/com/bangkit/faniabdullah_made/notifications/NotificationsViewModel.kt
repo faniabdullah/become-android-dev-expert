@@ -1,4 +1,4 @@
-package com.bangkit.faniabdullah_made.core.ui.notifications
+package com.bangkit.faniabdullah_made.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

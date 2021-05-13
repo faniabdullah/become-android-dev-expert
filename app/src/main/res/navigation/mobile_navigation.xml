@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.bangkit.faniabdullah_made.core.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.bangkit.faniabdullah_made.home.HomeFragment"
+        android:label="@string/title_movie"
+        tools:layout="@layout/fragment_movie" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.bangkit.faniabdullah_made.core.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.bangkit.faniabdullah_made.dashboard.DashboardFragment"
+        android:label="@string/title_tv_shows"
+        tools:layout="@layout/fragment_tv" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.bangkit.faniabdullah_made.core.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.bangkit.faniabdullah_made.notifications.NotificationsFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
 </navigation>
