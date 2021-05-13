@@ -4,4 +4,6 @@
     <string name="title_movie">Movies</string>
     <string name="title_tv_shows">TvShows</string>
     <string name="title_favorite">Favorite</string>
+    <string name="notification_empty">Opps .. The Data was empty</string>
+    <string name="notification_error">Opps .. Something went Wrong</string>
 </resources>

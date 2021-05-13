@@ -1,13 +1,12 @@
 package com.bangkit.faniabdullah_made.movie
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.bangkit.faniabdullah_made.core.domain.usecase.MovieUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class MovieViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+@HiltViewModel
+class MovieViewModel @Inject constructor(movieUseCase: MovieUseCase) : ViewModel() {
+    val movies = movieUseCase.getAllMovie().asLiveData()
 }
