@@ -2,7 +2,7 @@ package com.bangkit.faniabdullah_made.core.data.source.remote
 
 import android.util.Log
 import com.bangkit.faniabdullah_made.core.data.source.remote.network.ApiService
-import com.bangkit.faniabdullah_made.core.data.source.remote.response.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
 import com.bangkit.faniabdullah_made.core.data.source.remote.vo.ApiResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

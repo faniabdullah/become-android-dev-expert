@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".movie_detail.MovieDetailActivity"
+    tools:showIn="@layout/activity_movie_detail">
+
+    <include layout="@layout/jetpack_pro_detail" />
+
+</androidx.core.widget.NestedScrollView>

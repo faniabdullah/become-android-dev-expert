@@ -1,7 +1,7 @@
 package com.bangkit.faniabdullah_made.core.utils
 
 import com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity
-import com.bangkit.faniabdullah_made.core.data.source.remote.response.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 
 object DataMapper {

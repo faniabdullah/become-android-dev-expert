@@ -12,7 +12,7 @@ import com.bangkit.faniabdullah_made.R
 import com.bangkit.faniabdullah_made.core.data.Resource
 import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
 import com.bangkit.faniabdullah_made.databinding.FragmentMovieBinding
-import com.bangkit.faniabdullah_made.detail_movie.DetailMovieActivity
+import com.bangkit.faniabdullah_made.movie_detail.MovieDetailActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,8 +38,8 @@ class MovieFragment : Fragment() {
 
             val movieAdapter = MovieAdapter()
             movieAdapter.onItemClick = { selectedData ->
-                val intent = Intent(activity, DetailMovieActivity::class.java)
-                intent.putExtra(DetailMovieActivity.EXTRA_DATA, selectedData)
+                val intent = Intent(activity, MovieDetailActivity::class.java)
+                intent.putExtra(MovieDetailActivity.EXTRA_DATA, selectedData)
                 startActivity(intent)
             }
 

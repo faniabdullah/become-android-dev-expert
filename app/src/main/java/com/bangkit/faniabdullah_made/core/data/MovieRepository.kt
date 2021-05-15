@@ -2,7 +2,7 @@ package com.bangkit.faniabdullah_made.core.data
 
 import com.bangkit.faniabdullah_made.core.data.source.local.LocalDataSource
 import com.bangkit.faniabdullah_made.core.data.source.remote.RemoteDataSource
-import com.bangkit.faniabdullah_made.core.data.source.remote.response.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
 import com.bangkit.faniabdullah_made.core.data.source.remote.vo.ApiResponse
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 import com.bangkit.faniabdullah_made.core.domain.repository.IMovieRepository

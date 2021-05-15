@@ -8,7 +8,7 @@ import com.bangkit.faniabdullah_made.R
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 import com.bangkit.faniabdullah_made.databinding.MoviesItemBinding
 import com.bumptech.glide.Glide
-import java.util.ArrayList
+import java.util.*
 
 class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
 
@@ -23,7 +23,9 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ListViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.movies_item, parent, false))
+        ListViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.movies_item, parent, false)
+        )
 
     override fun getItemCount() = listData.size
 

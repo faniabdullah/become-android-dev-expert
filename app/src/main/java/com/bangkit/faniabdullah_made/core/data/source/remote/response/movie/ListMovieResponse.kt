@@ -1,4 +1,4 @@
-package com.bangkit.faniabdullah_made.core.data.source.remote.response
+package com.bangkit.faniabdullah_made.core.data.source.remote.response.movie
 
 import com.google.gson.annotations.SerializedName
 

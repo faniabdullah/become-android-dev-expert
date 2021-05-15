@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bangkit.faniabdullah_made">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,12 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Made">
-        <activity android:name=".detail_movie.DetailMovieActivity" />
+        <activity
+            android:name=".movie_detail.MovieDetailActivity"
+            android:label="@string/title_activity_movie_detail" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
