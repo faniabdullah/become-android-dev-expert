@@ -18,4 +18,6 @@ class LocalDataSource @Inject constructor(private val movieDao: MovieDao) {
         movie.isFavorite = newState
         movieDao.updateMovie(movie)
     }
+
+    fun searchMovie(value: String): Flow<List<MovieEntity>> = movieDao.searchMovies(value)
 }

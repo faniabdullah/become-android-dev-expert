@@ -21,4 +21,7 @@ interface MovieDao {
 
     @Query("SELECT * FROM tb_movie WHERE movieId = :movieId")
     fun getDetailMovieById(movieId: Int): LiveData<MovieEntity>
+
+    @Query("SELECT * FROM tb_movie WHERE  title LIKE '%' || :search || '%'")
+    fun searchMovies(search: String): Flow<List<MovieEntity>>
 }

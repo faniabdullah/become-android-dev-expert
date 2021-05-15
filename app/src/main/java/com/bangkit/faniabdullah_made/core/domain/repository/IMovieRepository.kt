@@ -11,4 +11,5 @@ interface IMovieRepository {
 
     fun setFavoriteMovie(movie: Movie, state: Boolean)
 
+    fun searchMovie(value: String): Flow<List<Movie>>
 }

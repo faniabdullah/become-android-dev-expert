@@ -50,4 +50,10 @@ class MovieRepository @Inject constructor(
         val movieEntity = DataMapper.mapDomainToEntity(movie)
         appExecutors.diskIO().execute { localDataSource.setFavoriteMovie(movieEntity, state) }
     }
+
+    override fun searchMovie(value: String): Flow<List<Movie>> {
+        return localDataSource.searchMovie(value).map {
+            DataMapper.mapEntitiesToDomain(it)
+        }
+    }
 }
