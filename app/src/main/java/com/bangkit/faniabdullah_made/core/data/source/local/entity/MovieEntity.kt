@@ -27,6 +27,8 @@ data class MovieEntity(
     val vote_average: Double? = null,
     @ColumnInfo(name = "vote_count")
     val vote_count: Int? = null,
+    @ColumnInfo(name = "original_language")
+    val original_langugage: String? = null,
     @ColumnInfo(name = "bookmarked")
     var isFavorite: Boolean = false,
 ) : Parcelable

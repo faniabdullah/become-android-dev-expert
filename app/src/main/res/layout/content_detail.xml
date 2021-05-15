@@ -38,20 +38,20 @@
         app:layout_constraintTop_toBottomOf="@+id/poster_movie" />
 
     <TextView
-        android:id="@+id/tv_title_overview2"
+        android:id="@+id/tv_title_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="@string/overview_title"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_information_title"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/poster_movie" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview_detail" />
 
     <TextView
-        android:id="@+id/tv_info_movie"
+        android:id="@+id/tv_rating_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,25 +68,24 @@
         android:id="@+id/tv_overview_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_overview"
-        app:layout_constraintVertical_bias="0.041"
-        tools:text="textView" />
-
-    <TextView
-        android:id="@+id/tv_overview_detail3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_overview"
-        app:layout_constraintVertical_bias="0.222"
+        tools:text="textView" />
+
+    <TextView
+        android:id="@+id/tv_information_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_information"
         tools:text="textView" />
 
     <ImageView
@@ -137,7 +136,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toEndOf="@+id/poster_movie"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info_movie"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating_movie"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_favorite_24"
         app:tint="@color/blue_200" />
@@ -146,12 +145,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
-        android:text="Share"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_share"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_overview_detail3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_information_detail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

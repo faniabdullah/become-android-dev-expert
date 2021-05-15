@@ -8,6 +8,7 @@ object DataMapper {
     fun mapResponsesToEntities(input: List<MovieResponse>): List<MovieEntity> {
         val movieList = ArrayList<MovieEntity>()
         input.map { movieResponse ->
+
             val movie = MovieEntity(
                 movie_id = movieResponse.id,
                 name = movieResponse.originalTitle,
@@ -16,7 +17,8 @@ object DataMapper {
                 release_date = movieResponse.releaseDate,
                 vote_average = movieResponse.voteAverage,
                 vote_count = movieResponse.voteCount,
-                isFavorite = false
+                isFavorite = false,
+                original_langugage = movieResponse.originalLanguage
             )
             movieList.add(movie)
         }
@@ -30,8 +32,11 @@ object DataMapper {
                 name = it.name.toString(),
                 overview = it.overview,
                 poster = it.poster_path,
-                isFavorite = false,
-                vote_average = it.vote_average
+                isFavorite = it.isFavorite,
+                vote_average = it.vote_average,
+                release_date = it.release_date,
+                vote_count = it.vote_count,
+                original_language = it.original_langugage
             )
         }
 
@@ -41,6 +46,9 @@ object DataMapper {
         name = input.name,
         poster_path = input.poster,
         vote_average = input.vote_average,
-        isFavorite = input.isFavorite
+        isFavorite = input.isFavorite,
+        release_date = input.release_date,
+        vote_count = input.vote_count,
+        original_langugage = input.original_language
     )
 }

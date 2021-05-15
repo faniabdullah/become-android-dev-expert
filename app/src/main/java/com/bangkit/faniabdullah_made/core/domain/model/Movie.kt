@@ -1,6 +1,7 @@
 package com.bangkit.faniabdullah_made.core.domain.model
 
 import android.os.Parcelable
+import androidx.room.ColumnInfo
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -11,4 +12,7 @@ data class Movie (
     val poster : String ? = null,
     val isFavorite: Boolean,
     val vote_average: Double? = null,
+    val release_date: String? = null,
+    val vote_count: Int? = null,
+    val original_language : String ? = null
 ) : Parcelable

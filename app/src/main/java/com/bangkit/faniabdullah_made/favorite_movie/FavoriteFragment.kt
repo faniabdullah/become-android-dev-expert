@@ -1,18 +1,22 @@
 package com.bangkit.faniabdullah_made.favorite_movie
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
 import com.bangkit.faniabdullah_made.databinding.FragmentFavoriteBinding
+import com.bangkit.faniabdullah_made.movie_detail.MovieDetailActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FavoriteFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: FavoriteViewModel
+    private val favoriteViewModel: FavoriteViewModel by viewModels()
     private var _binding: FragmentFavoriteBinding? = null
 
     private val binding get() = _binding!!
@@ -21,18 +25,34 @@ class FavoriteFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(FavoriteViewModel::class.java)
-
+    ): View {
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if (activity != null) {
+
+            val movieAdapter = MovieAdapter()
+            movieAdapter.onItemClick = { selectedData ->
+                val intent = Intent(activity, MovieDetailActivity::class.java)
+                intent.putExtra(MovieDetailActivity.EXTRA_DATA, selectedData)
+                startActivity(intent)
+            }
+
+            favoriteViewModel.moviesFavorite.observe(viewLifecycleOwner, { movie ->
+                movieAdapter.setData(movie)
+                binding.viewEmpty.root.visibility =
+                    if (movie.isNotEmpty()) View.GONE else View.VISIBLE
+            })
+
+            with(binding.rvMovieFavorite) {
+                layoutManager = GridLayoutManager(activity, 2)
+                setHasFixedSize(true)
+                adapter = movieAdapter
+            }
+        }
     }
 
     override fun onDestroyView() {
