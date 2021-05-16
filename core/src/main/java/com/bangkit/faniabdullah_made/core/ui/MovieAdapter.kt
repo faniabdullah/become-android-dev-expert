@@ -8,6 +8,7 @@ import com.bangkit.faniabdullah_made.core.R
 import com.bangkit.faniabdullah_made.core.databinding.MoviesItemBinding
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import java.util.*
 
 class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
@@ -40,6 +41,8 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
             with(binding) {
                 Glide.with(itemView.context)
                     .load("https://image.tmdb.org/t/p/w500${data.poster}")
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .placeholder(R.drawable.placeholder_movie)
                     .into(posterMovie)
                 tvOverview.text = data.overview
                 tvTitle.text = data.name

@@ -3,7 +3,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constrant_layout_version"
-
+    api "androidx.navigation:navigation-dynamic-features-fragment:2.3.5"
     implementation "com.github.bumptech.glide:glide:$glide_version"
 
     testImplementation 'junit:junit:4.13.2'

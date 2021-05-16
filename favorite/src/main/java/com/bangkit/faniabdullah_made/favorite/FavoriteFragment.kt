@@ -1,4 +1,4 @@
-package com.bangkit.faniabdullah_made.favorite_movie
+package com.bangkit.faniabdullah_made.favorite
 
 import android.content.Intent
 import android.os.Bundle
