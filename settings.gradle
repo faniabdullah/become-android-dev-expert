@@ -1,2 +1,3 @@
 rootProject.name = "made"
 include ':app'
+include ':core'

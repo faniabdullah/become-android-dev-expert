@@ -113,12 +113,12 @@ class MovieFragment : Fragment() {
         movieViewModel.movies.observe(viewLifecycleOwner, { movie ->
             if (movie != null) {
                 when (movie) {
-                    is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
-                    is Resource.Success -> {
+                    is com.bangkit.faniabdullah_made.core.data.Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                    is com.bangkit.faniabdullah_made.core.data.Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.setData(movie.data)
                     }
-                    is Resource.Error -> {
+                    is com.bangkit.faniabdullah_made.core.data.Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
                         binding.viewError.tvMsgError.text =

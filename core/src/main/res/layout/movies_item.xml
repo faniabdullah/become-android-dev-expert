@@ -30,7 +30,7 @@
             android:foregroundGravity="fill"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription"
-            tools:srcCompat="@drawable/placeholder_movie" />
+            tools:srcCompat="@tools:sample/avatars" />
 
     </androidx.cardview.widget.CardView>
 

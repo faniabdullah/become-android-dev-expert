@@ -17,11 +17,11 @@ import javax.inject.Singleton
 class DatabaseModule {
     @Singleton
     @Provides
-    fun provideDatabase(@ApplicationContext context: Context): MovieDatabase = Room.databaseBuilder(
+    fun provideDatabase(@ApplicationContext context: Context): com.bangkit.faniabdullah_made.core.data.source.local.room.MovieDatabase = Room.databaseBuilder(
         context,
-        MovieDatabase::class.java, "Movie.db"
+        com.bangkit.faniabdullah_made.core.data.source.local.room.MovieDatabase::class.java, "Movie.db"
     ).fallbackToDestructiveMigration().build()
 
     @Provides
-    fun provideMovieDao(database: MovieDatabase): MovieDao = database.movieDao()
+    fun provideMovieDao(database: com.bangkit.faniabdullah_made.core.data.source.local.room.MovieDatabase): com.bangkit.faniabdullah_made.core.data.source.local.room.MovieDao = database.movieDao()
 }

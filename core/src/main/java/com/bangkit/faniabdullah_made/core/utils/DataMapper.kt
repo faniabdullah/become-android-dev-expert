@@ -5,11 +5,11 @@ import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.Movi
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 
 object DataMapper {
-    fun mapResponsesToEntities(input: List<MovieResponse>): List<MovieEntity> {
-        val movieList = ArrayList<MovieEntity>()
+    fun mapResponsesToEntities(input: List<MovieResponse>): List<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity> {
+        val movieList = ArrayList<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity>()
         input.map { movieResponse ->
 
-            val movie = MovieEntity(
+            val movie = com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity(
                 movie_id = movieResponse.id,
                 name = movieResponse.originalTitle,
                 overview = movieResponse.overview,
@@ -25,7 +25,7 @@ object DataMapper {
         return movieList
     }
 
-    fun mapEntitiesToDomain(input: List<MovieEntity>): List<Movie> =
+    fun mapEntitiesToDomain(input: List<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity>): List<Movie> =
         input.map {
             Movie(
                 id = it.movie_id,
@@ -40,15 +40,16 @@ object DataMapper {
             )
         }
 
-    fun mapDomainToEntity(input: Movie) = MovieEntity(
-        movie_id = input.id,
-        overview = input.overview,
-        name = input.name,
-        poster_path = input.poster,
-        vote_average = input.vote_average,
-        isFavorite = input.isFavorite,
-        release_date = input.release_date,
-        vote_count = input.vote_count,
-        original_langugage = input.original_language
-    )
+    fun mapDomainToEntity(input: Movie) =
+        com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity(
+            movie_id = input.id,
+            overview = input.overview,
+            name = input.name,
+            poster_path = input.poster,
+            vote_average = input.vote_average,
+            isFavorite = input.isFavorite,
+            release_date = input.release_date,
+            vote_count = input.vote_count,
+            original_langugage = input.original_language
+        )
 }

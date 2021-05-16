@@ -12,6 +12,6 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepositoryModule {
 
     @Binds
-    abstract fun provideRepository(movieRepository: MovieRepository): IMovieRepository
+    abstract fun provideRepository(movieRepository: com.bangkit.faniabdullah_made.core.data.MovieRepository): IMovieRepository
 
 }
