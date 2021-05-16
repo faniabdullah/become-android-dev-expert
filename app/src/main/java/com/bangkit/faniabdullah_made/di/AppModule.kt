@@ -14,5 +14,5 @@ abstract class AppModule {
 
     @Binds
     @ViewModelScoped
-    abstract fun provideMovieRepository (movieInteractor: MovieInteractor ): MovieUseCase
+    abstract fun provideMovieRepository(movieInteractor: MovieInteractor): MovieUseCase
 }
