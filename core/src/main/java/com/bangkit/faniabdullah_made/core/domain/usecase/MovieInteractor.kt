@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class MovieInteractor @Inject constructor(private val movieRepository: IMovieRepository) :
     MovieUseCase {
-    override fun getAllMovie(): Flow<com.bangkit.faniabdullah_made.core.data.Resource<List<Movie>>> = movieRepository.getAllMovie()
+    override fun getAllMovie(): Flow<Resource<List<Movie>>> = movieRepository.getAllMovie()
     override fun getFavoriteMovie(): Flow<List<Movie>> = movieRepository.getFavoriteMovie()
     override fun setFavoriteMovie(movie: Movie, state: Boolean) =
         movieRepository.setFavoriteMovie(movie, state)

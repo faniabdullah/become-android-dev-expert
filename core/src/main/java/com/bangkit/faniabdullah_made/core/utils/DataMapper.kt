@@ -5,11 +5,11 @@ import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.Movi
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 
 object DataMapper {
-    fun mapResponsesToEntities(input: List<MovieResponse>): List<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity> {
-        val movieList = ArrayList<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity>()
+    fun mapResponsesToEntities(input: List<MovieResponse>): List<MovieEntity> {
+        val movieList = ArrayList<MovieEntity>()
         input.map { movieResponse ->
 
-            val movie = com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity(
+            val movie = MovieEntity(
                 movie_id = movieResponse.id,
                 name = movieResponse.originalTitle,
                 overview = movieResponse.overview,
@@ -25,7 +25,7 @@ object DataMapper {
         return movieList
     }
 
-    fun mapEntitiesToDomain(input: List<com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity>): List<Movie> =
+    fun mapEntitiesToDomain(input: List<MovieEntity>): List<Movie> =
         input.map {
             Movie(
                 id = it.movie_id,
@@ -41,7 +41,7 @@ object DataMapper {
         }
 
     fun mapDomainToEntity(input: Movie) =
-        com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity(
+        MovieEntity(
             movie_id = input.id,
             overview = input.overview,
             name = input.name,

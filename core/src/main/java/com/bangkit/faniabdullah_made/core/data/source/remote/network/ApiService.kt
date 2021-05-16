@@ -4,7 +4,7 @@ import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.List
 import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
-import com.bangkit.faniabdullah_made.BuildConfig.MOVIE_TOKEN as ApiKey
+import com.bangkit.faniabdullah_made.core.BuildConfig.MOVIE_TOKEN as ApiKey
 
 interface ApiService {
 

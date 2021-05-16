@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.faniabdullah_made.R
+import com.bangkit.faniabdullah_made.core.R
+import com.bangkit.faniabdullah_made.core.databinding.MoviesItemBinding
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
-import com.bangkit.faniabdullah_made.databinding.MoviesItemBinding
 import com.bumptech.glide.Glide
 import java.util.*
 
