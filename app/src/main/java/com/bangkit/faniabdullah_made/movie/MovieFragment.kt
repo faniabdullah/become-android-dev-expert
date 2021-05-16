@@ -56,14 +56,17 @@ class MovieFragment : Fragment() {
             }
 
             movieViewModel.movieResult.observe(viewLifecycleOwner, { movie ->
-                if (movie.isNullOrEmpty()) {
-                    binding.progressBar.visibility = View.GONE
-                    binding.viewError.root.visibility = View.VISIBLE
-                } else {
-                    binding.progressBar.visibility = View.GONE
+                if (searchView.query.toString() == "") {
                     binding.viewError.root.visibility = View.GONE
+                    observerMovie()
+                } else {
+                    if (movie.isNullOrEmpty()) {
+                        binding.viewError.root.visibility = View.VISIBLE
+                    } else {
+                        binding.viewError.root.visibility = View.GONE
+                    }
+                    movieAdapter.setData(movie)
                 }
-                movieAdapter.setData(movie)
             })
 
 
@@ -85,13 +88,14 @@ class MovieFragment : Fragment() {
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
-            override fun onQueryTextSubmit(query: String): Boolean {
+            override fun onQueryTextSubmit(newText: String): Boolean {
                 return true
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let {
-                    if (newText == "") {
+            override fun onQueryTextChange(newText: String): Boolean {
+
+                newText.let {
+                    if (newText == "" || newText.isEmpty()) {
                         observerMovie()
                     } else {
                         movieViewModel.setSearchQuery(it)
