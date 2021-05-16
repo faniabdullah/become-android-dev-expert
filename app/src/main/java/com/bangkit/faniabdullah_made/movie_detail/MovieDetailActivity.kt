@@ -1,7 +1,6 @@
 package com.bangkit.faniabdullah_made.movie_detail
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -53,7 +52,6 @@ class MovieDetailActivity : AppCompatActivity() {
                     detailViewModel.setFavoriteMovie(detailMovie, statusFavorite)
                     setStatusFavorite(statusFavorite)
                     showSnackBar(statusFavorite, detailMovie.name)
-                    Log.e("s","state "+statusFavorite)
                 }
 
             }
