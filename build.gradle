@@ -23,8 +23,8 @@ buildscript {
     ext.navigation_fragment_ktx = "2.3.5"
     ext.viewmodel_ktx_version = "2.3.1"
 
-    ext.hilt_version = '2.34.1-beta'
-    ext.hilt_jetpack_version = '1.0.0-alpha03'
+    ext.hilt_version = '2.28-alpha'
+    ext.hilt_jetpack_version = '1.0.0-alpha02'
     ext.glide_version = "4.12.0"
 
 
