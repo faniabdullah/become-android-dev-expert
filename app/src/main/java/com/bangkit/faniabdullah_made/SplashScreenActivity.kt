@@ -1,10 +1,10 @@
 package com.bangkit.faniabdullah_made
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.faniabdullah_made.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {

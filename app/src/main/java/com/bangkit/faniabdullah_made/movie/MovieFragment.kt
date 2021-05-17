@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bangkit.faniabdullah_made.R
-import com.bangkit.faniabdullah_made.setting.SettingActivity
 import com.bangkit.faniabdullah_made.core.data.Resource
 import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
 import com.bangkit.faniabdullah_made.databinding.FragmentMovieBinding
 import com.bangkit.faniabdullah_made.movie_detail.MovieDetailActivity
+import com.bangkit.faniabdullah_made.setting.SettingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview

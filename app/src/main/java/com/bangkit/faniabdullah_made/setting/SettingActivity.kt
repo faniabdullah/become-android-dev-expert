@@ -1,9 +1,9 @@
 package com.bangkit.faniabdullah_made.setting
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.faniabdullah_made.databinding.ActivitySettingBinding
 
 class SettingActivity : AppCompatActivity() {
@@ -19,6 +19,7 @@ class SettingActivity : AppCompatActivity() {
             startActivity(mIntent)
         }
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

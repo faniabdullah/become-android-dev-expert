@@ -7,7 +7,6 @@ import dagger.hilt.android.components.ApplicationComponent
 
 
 @EntryPoint
-
 @InstallIn(ApplicationComponent::class)
 interface FavoriteModuleDependencies {
 
