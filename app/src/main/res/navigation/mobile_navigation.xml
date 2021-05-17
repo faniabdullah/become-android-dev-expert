@@ -14,6 +14,7 @@
 
     <fragment
         android:id="@+id/navigation_favorite"
+        android:label="@string/title_favorite"
         android:name="com.bangkit.faniabdullah_made.favorite.FavoriteFragment" />
 
 </navigation>

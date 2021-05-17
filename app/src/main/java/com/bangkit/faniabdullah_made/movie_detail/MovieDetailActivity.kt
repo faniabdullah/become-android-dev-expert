@@ -3,6 +3,7 @@ package com.bangkit.faniabdullah_made.movie_detail
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ShareCompat
 import androidx.core.content.ContextCompat
 import com.bangkit.faniabdullah_made.R
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
@@ -29,6 +30,19 @@ class MovieDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         val detailMovie = intent.getParcelableExtra<Movie>(EXTRA_DATA)
         showDetailMovie(detailMovie)
+        binding.contentDetailMovie.buttonShare.setOnClickListener {
+            shareSetting()
+        }
+    }
+
+    private fun shareSetting() {
+        val mimeType = "text/plain"
+        ShareCompat.IntentBuilder.from(this).apply {
+            setType(mimeType)
+            setChooserTitle(getString(R.string.app_name))
+            setText(getString(R.string.title_movie))
+            startChooser()
+        }
     }
 
     private fun showDetailMovie(detailMovie: Movie?) {

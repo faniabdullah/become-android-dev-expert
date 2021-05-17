@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bangkit.faniabdullah_made.R
+import com.bangkit.faniabdullah_made.setting.SettingActivity
 import com.bangkit.faniabdullah_made.core.data.Resource
 import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
 import com.bangkit.faniabdullah_made.databinding.FragmentMovieBinding
@@ -62,6 +63,7 @@ class MovieFragment : Fragment() {
                 } else {
                     if (movie.isNullOrEmpty()) {
                         binding.viewError.root.visibility = View.VISIBLE
+                        binding.viewError.tvMsgError.text = getString(R.string.notification_empty)
                     } else {
                         binding.viewError.root.visibility = View.GONE
                     }
@@ -117,6 +119,7 @@ class MovieFragment : Fragment() {
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.setData(movie.data)
+                        binding.viewError.root.visibility = View.GONE
                     }
                     is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
@@ -127,6 +130,14 @@ class MovieFragment : Fragment() {
                 }
             }
         })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_setting) {
+            val intent = Intent(activity, SettingActivity::class.java)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onDestroyView() {

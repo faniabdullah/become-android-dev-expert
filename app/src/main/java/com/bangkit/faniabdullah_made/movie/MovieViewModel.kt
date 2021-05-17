@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.*
 
 @FlowPreview
 @ExperimentalCoroutinesApi
-
 class MovieViewModel @ViewModelInject constructor(movieUseCase: MovieUseCase) : ViewModel() {
     val movies = movieUseCase.getAllMovie().asLiveData()
 

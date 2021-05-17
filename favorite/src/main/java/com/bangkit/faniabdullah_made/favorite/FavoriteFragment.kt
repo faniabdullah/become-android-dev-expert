@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
-import com.bangkit.faniabdullah_made.databinding.FragmentFavoriteBinding
 import com.bangkit.faniabdullah_made.di.FavoriteModuleDependencies
+import com.bangkit.faniabdullah_made.favorite.databinding.FragmentFavoriteBinding
 import com.bangkit.faniabdullah_made.favorite.di.DaggerFavoriteModule
 import com.bangkit.faniabdullah_made.favorite.di.ViewModelFactory
 import com.bangkit.faniabdullah_made.movie_detail.MovieDetailActivity
