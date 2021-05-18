@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/featureFavorite"
+    android:name="com.bangkit.faniabdullah_made.favorite.FavoriteFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:moduleName="myFavoriteFeature"
-    android:id="@+id/featureFavorite"
-    android:name="com.bangkit.faniabdullah_made.favorite.FavoriteFragment"
     tools:context=".FavoriteFragment">
 
     <androidx.recyclerview.widget.RecyclerView
