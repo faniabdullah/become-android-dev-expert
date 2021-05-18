@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed3e9182-05d8-480f-aaee-0b2a3cbe6233" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fragment_favorite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_empty.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view_error.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/nav_favorite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/com/bangkit/faniabdullah_made/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../app/src/main/java/com/bangkit/faniabdullah_made/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1sfM4oVTxK2NTzMZMP8hKZQpWY4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed3e9182-05d8-480f-aaee-0b2a3cbe6233" name="Default Changelist" comment="" />
+      <created>1621259001828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621259001828</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1621259137076">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1621259137076" />
+  </component>
+</project>
