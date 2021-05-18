@@ -124,8 +124,7 @@ class MovieFragment : Fragment() {
                     is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
-                        binding.viewError.tvMsgError.text =
-                            movie.message ?: getString(R.string.notification_error)
+                        binding.viewError.tvMsgError.text = getString(R.string.notification_error)
                     }
                 }
             }

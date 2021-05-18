@@ -30,17 +30,15 @@ class MovieDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         val detailMovie = intent.getParcelableExtra<Movie>(EXTRA_DATA)
         showDetailMovie(detailMovie)
-        binding.contentDetailMovie.buttonShare.setOnClickListener {
-            shareSetting()
-        }
+
     }
 
-    private fun shareSetting() {
+    private fun shareSetting(name: String, overview: String?) {
         val mimeType = "text/plain"
         ShareCompat.IntentBuilder.from(this).apply {
             setType(mimeType)
-            setChooserTitle(getString(R.string.app_name))
-            setText(getString(R.string.title_movie))
+            setChooserTitle(name)
+            setText("$name \n $overview")
             startChooser()
         }
     }
@@ -68,7 +66,12 @@ class MovieDetailActivity : AppCompatActivity() {
                     showSnackBar(statusFavorite, detailMovie.name)
                 }
 
+                buttonShare.setOnClickListener {
+                    shareSetting(detailMovie.name , detailMovie.overview)
+                }
+
             }
+
         }
     }
 
