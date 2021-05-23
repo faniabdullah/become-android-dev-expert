@@ -67,7 +67,7 @@ class MovieDetailActivity : AppCompatActivity() {
                 }
 
                 buttonShare.setOnClickListener {
-                    shareSetting(detailMovie.name , detailMovie.overview)
+                    shareSetting(detailMovie.name, detailMovie.overview)
                 }
 
             }
