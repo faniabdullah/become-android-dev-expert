@@ -57,5 +57,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_fragment_ktx"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_ui_ktx"
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    implementation "com.airbnb.android:lottie:$lottie_version"
 
 }
