@@ -91,3 +91,5 @@
 -dontwarn okhttp3.internal.platform.ConscryptPlatform
 -dontwarn org.conscrypt.ConscryptHostnameVerifier
 
+-dontwarn com.airbnb.lottie.**
+-keep class com.airbnb.lottie.** {*;}
