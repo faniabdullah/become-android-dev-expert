@@ -20,4 +20,13 @@ class LocalDataSource @Inject constructor(private val movieDao: MovieDao) {
     }
 
     fun searchMovie(value: String): Flow<List<MovieEntity>> = movieDao.searchMovies(value)
+
+    fun getAllTvShows(): Flow<List<MovieEntity>> = movieDao.getListTvShows()
+
+    fun getFavoriteTvShows(): Flow<List<MovieEntity>> = movieDao.getBookmarkedTvShows()
+
+    fun searchTvShows(value: String): Flow<List<MovieEntity>> = movieDao.searchTvShows(value)
+
+
+
 }

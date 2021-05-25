@@ -12,4 +12,10 @@ interface IMovieRepository {
     fun setFavoriteMovie(movie: Movie, state: Boolean)
 
     fun searchMovie(value: String): Flow<List<Movie>>
+
+    fun getAllTvShows(): Flow<Resource<List<Movie>>>
+
+    fun getFavoriteTvShows(): Flow<List<Movie>>
+
+    fun searchTvShows(value: String): Flow<List<Movie>>
 }

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="notification_empty_favorite">Oops…  You doesn\'t have favorite Movie</string>
+    <string name="movie_title_fav">Movie</string>
+    <string name="tvShows_title_fav">Tv Shows</string>
 </resources>

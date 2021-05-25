@@ -3,6 +3,7 @@ package com.bangkit.faniabdullah_made.core.data
 import com.bangkit.faniabdullah_made.core.data.source.local.LocalDataSource
 import com.bangkit.faniabdullah_made.core.data.source.remote.RemoteDataSource
 import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.tvshows.TvShowsResponse
 import com.bangkit.faniabdullah_made.core.data.source.remote.vo.ApiResponse
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 import com.bangkit.faniabdullah_made.core.domain.repository.IMovieRepository
@@ -54,6 +55,41 @@ class MovieRepository @Inject constructor(
 
     override fun searchMovie(value: String): Flow<List<Movie>> {
         return localDataSource.searchMovie(value).map {
+            DataMapper.mapEntitiesToDomain(it)
+        }
+    }
+
+
+    override fun getAllTvShows(): Flow<Resource<List<Movie>>> {
+        return object :
+            NetworkBoundResource<List<Movie>, List<TvShowsResponse>>() {
+            override fun loadFromDB(): Flow<List<Movie>> {
+                return localDataSource.getAllTvShows().map {
+                    DataMapper.mapEntitiesToDomain(it)
+                }
+
+            }
+
+            override fun shouldFetch(data: List<Movie>?): Boolean = data == null || data.isEmpty()
+
+            override suspend fun createCall(): Flow<ApiResponse<List<TvShowsResponse>>> =
+                remoteDataSource.getAllTvShows()
+
+            override suspend fun saveCallResult(data: List<TvShowsResponse>) {
+                val movieList = DataMapper.mapResponsesTvShowsToEntities(data)
+                localDataSource.insertMovie(movieList)
+            }
+        }.asFlow()
+    }
+
+    override fun getFavoriteTvShows(): Flow<List<Movie>> {
+        return localDataSource.getFavoriteTvShows().map {
+            DataMapper.mapEntitiesToDomain(it)
+        }
+    }
+
+    override fun searchTvShows(value: String): Flow<List<Movie>> {
+        return localDataSource.searchTvShows(value).map {
             DataMapper.mapEntitiesToDomain(it)
         }
     }

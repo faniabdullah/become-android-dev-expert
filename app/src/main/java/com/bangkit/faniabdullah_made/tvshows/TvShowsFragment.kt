@@ -1,4 +1,4 @@
-package com.bangkit.faniabdullah_made.movie
+package com.bangkit.faniabdullah_made.tvshows
 
 import android.app.SearchManager
 import android.content.Context
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bangkit.faniabdullah_made.R
 import com.bangkit.faniabdullah_made.core.data.Resource
 import com.bangkit.faniabdullah_made.core.ui.MovieAdapter
-import com.bangkit.faniabdullah_made.databinding.FragmentMovieBinding
+import com.bangkit.faniabdullah_made.databinding.FragmentTvshowsBinding
 import com.bangkit.faniabdullah_made.movie_detail.MovieDetailActivity
 import com.bangkit.faniabdullah_made.setting.SettingActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,11 +23,11 @@ import kotlinx.coroutines.FlowPreview
 @FlowPreview
 @ExperimentalCoroutinesApi
 @AndroidEntryPoint
-class MovieFragment : Fragment() {
+class TvShowsFragment : Fragment() {
 
-    private val movieViewModel: MovieViewModel by viewModels()
-    private var _binding: FragmentMovieBinding? = null
-    private val binding get() = _binding as FragmentMovieBinding
+    private val movieViewModel: TvShowsViewModel by viewModels()
+    private var _binding: FragmentTvshowsBinding? = null
+    private val binding get() = _binding as FragmentTvshowsBinding
     private lateinit var searchView: SearchView
     private lateinit var movieAdapter: MovieAdapter
 
@@ -41,7 +41,7 @@ class MovieFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMovieBinding.inflate(inflater, container, false)
+        _binding = FragmentTvshowsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -72,7 +72,7 @@ class MovieFragment : Fragment() {
             })
 
 
-            with(binding.rvMovie) {
+            with(binding.rvTvShows) {
                 layoutManager = GridLayoutManager(activity, 2)
                 setHasFixedSize(true)
                 adapter = movieAdapter
@@ -141,8 +141,8 @@ class MovieFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding.rvTvShows.adapter = null
         searchView.setOnQueryTextListener(null)
-        binding.rvMovie.adapter = null
         _binding = null
     }
 }
