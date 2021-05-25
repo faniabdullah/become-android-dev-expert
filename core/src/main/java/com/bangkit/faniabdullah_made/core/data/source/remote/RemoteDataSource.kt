@@ -3,6 +3,7 @@ package com.bangkit.faniabdullah_made.core.data.source.remote
 import android.util.Log
 import com.bangkit.faniabdullah_made.core.data.source.remote.network.ApiService
 import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.tvshows.TvShowsResponse
 import com.bangkit.faniabdullah_made.core.data.source.remote.vo.ApiResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -18,6 +19,25 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
         return flow {
             try {
                 val response = apiService.getMovieNowPlaying()
+                val dataArray = response.results
+                if (dataArray != null) {
+                    if (dataArray.isNotEmpty()) {
+                        emit(ApiResponse.Success(response.results))
+                    } else {
+                        emit(ApiResponse.Empty)
+                    }
+                }
+            } catch (e: Exception) {
+                emit(ApiResponse.Error(e.toString()))
+                Log.e("RemoteDataSource", e.toString())
+            }
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun getAllTvShows(): Flow<ApiResponse<List<TvShowsResponse>>> {
+        return flow {
+            try {
+                val response = apiService.getPopularTvShows()
                 val dataArray = response.results
                 if (dataArray != null) {
                     if (dataArray.isNotEmpty()) {

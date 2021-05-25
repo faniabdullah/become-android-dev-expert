@@ -31,4 +31,6 @@ data class MovieEntity(
     val original_langugage: String? = null,
     @ColumnInfo(name = "bookmarked")
     var isFavorite: Boolean = false,
+    @ColumnInfo(name = "isTvShows")
+    var isTvShows: Boolean = false,
 ) : Parcelable

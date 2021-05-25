@@ -2,6 +2,7 @@ package com.bangkit.faniabdullah_made.core.utils
 
 import com.bangkit.faniabdullah_made.core.data.source.local.entity.MovieEntity
 import com.bangkit.faniabdullah_made.core.data.source.remote.response.movie.MovieResponse
+import com.bangkit.faniabdullah_made.core.data.source.remote.response.tvshows.TvShowsResponse
 import com.bangkit.faniabdullah_made.core.domain.model.Movie
 
 object DataMapper {
@@ -18,7 +19,8 @@ object DataMapper {
                 vote_average = movieResponse.voteAverage,
                 vote_count = movieResponse.voteCount,
                 isFavorite = false,
-                original_langugage = movieResponse.originalLanguage
+                original_langugage = movieResponse.originalLanguage,
+                isTvShows = false
             )
             movieList.add(movie)
         }
@@ -36,7 +38,8 @@ object DataMapper {
                 vote_average = it.vote_average,
                 release_date = it.release_date,
                 vote_count = it.vote_count,
-                original_language = it.original_langugage
+                original_language = it.original_langugage,
+                isTvShows = it.isTvShows
             )
         }
 
@@ -50,6 +53,28 @@ object DataMapper {
             isFavorite = input.isFavorite,
             release_date = input.release_date,
             vote_count = input.vote_count,
-            original_langugage = input.original_language
+            original_langugage = input.original_language,
+            isTvShows = input.isTvShows
         )
+
+    fun mapResponsesTvShowsToEntities(input: List<TvShowsResponse>): List<MovieEntity> {
+        val movieList = ArrayList<MovieEntity>()
+        input.map { movieResponse ->
+
+            val movie = MovieEntity(
+                movie_id = movieResponse.id,
+                name = movieResponse.name,
+                overview = movieResponse.overview,
+                poster_path = movieResponse.posterPath,
+                release_date = movieResponse.firstAirDate,
+                vote_average = movieResponse.voteAverage,
+                vote_count = movieResponse.voteCount,
+                isFavorite = false,
+                original_langugage = movieResponse.originalLanguage,
+                isTvShows = true
+            )
+            movieList.add(movie)
+        }
+        return movieList
+    }
 }

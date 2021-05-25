@@ -14,5 +14,11 @@ class MovieInteractor @Inject constructor(private val movieRepository: IMovieRep
         movieRepository.setFavoriteMovie(movie, state)
 
     override fun searchMovie(value: String): Flow<List<Movie>> = movieRepository.searchMovie(value)
+    override fun getAllTvShows(): Flow<Resource<List<Movie>>> = movieRepository.getAllTvShows()
+
+    override fun getFavoriteTvShows(): Flow<List<Movie>> = movieRepository.getFavoriteTvShows()
+
+    override fun searchTvShows(value: String): Flow<List<Movie>> =
+        movieRepository.searchTvShows(value)
 
 }
