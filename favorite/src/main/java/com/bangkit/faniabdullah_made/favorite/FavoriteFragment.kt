@@ -12,7 +12,6 @@ import com.bangkit.faniabdullah_made.favorite.databinding.FragmentFavoriteBindin
 class FavoriteFragment : Fragment() {
 
     private var _binding: FragmentFavoriteBinding? = null
-
     private val binding get() = _binding as FragmentFavoriteBinding
 
     override fun onCreateView(
