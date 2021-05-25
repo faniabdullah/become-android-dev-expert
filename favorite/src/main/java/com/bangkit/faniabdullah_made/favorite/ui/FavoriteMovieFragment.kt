@@ -84,11 +84,11 @@ class FavoriteMovieFragment(private val isMovie: Boolean) : Fragment() {
 
     private fun viewEmpty(notEmpty: Boolean) {
         if (notEmpty) {
-            binding.tvMsgError.visibility - View.GONE
+            binding.tvMsgError.visibility = View.GONE
             binding.imageView.visibility = View.GONE
         } else {
-            binding.tvMsgError.visibility - View.VISIBLE
             binding.imageView.visibility = View.VISIBLE
+            binding.tvMsgError.visibility = View.VISIBLE
         }
     }
 
