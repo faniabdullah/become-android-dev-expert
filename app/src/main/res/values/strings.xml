@@ -6,15 +6,13 @@
     <string name="title_movie">Movies</string>
     <string name="title_favorite">Favorite</string>
 
-    <string name="notification_empty_favorite">Oops… You doesn\'t have favorite Movie</string>
+
     <string name="notification_empty">Opps .. The Data was empty</string>
     <string name="notification_error">Opps .. Something went Wrong</string>
     <string name="title_activity_movie_detail">Detail Movie</string>
     <string name="removed_from_favorite">Removed From Favorite</string>
     <string name="added_to_favorite">Added From Favorite</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="backdrop_movie">backdrop_movie</string>
     <string name="overview_title">Overview</string>
     <string name="tv_information_title">Information</string>
 

@@ -98,8 +98,7 @@
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
-        tools:srcCompat="@drawable/placeholder_movie" />
+        tools:ignore="ContentDescription" />
 
 
     <androidx.constraintlayout.widget.Guideline

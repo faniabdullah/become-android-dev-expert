@@ -6,15 +6,13 @@
     <string name="title_favorite">Favorite</string>
     <string name="title_activity_setting">Pengaturan</string>
 
-    <string name="notification_empty_favorite">Oops… Kamu Tidak mempunyai favorite Movie</string>
     <string name="notification_empty">Opps .. Data Kosong</string>
     <string name="notification_error">Opps .. Ada yang salah dari server</string>
     <string name="title_activity_movie_detail">Detail Movie</string>
     <string name="removed_from_favorite">di hapus dari Favorite</string>
     <string name="added_to_favorite">Berhasil ditambahkan ke Favorite</string>
 
-    <string name="action_settings">Pengaturan</string>
-    <string name="backdrop_movie">backdrop_movie</string>
+
     <string name="overview_title">Overview</string>
     <string name="tv_information_title">Information</string>
 

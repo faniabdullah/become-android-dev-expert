@@ -54,7 +54,7 @@ class MovieDetailActivity : AppCompatActivity() {
                 Glide.with(this@MovieDetailActivity)
                     .load("https://image.tmdb.org/t/p/w500${detailMovie.poster}")
                     .transition(DrawableTransitionOptions.withCrossFade())
-                    .placeholder(R.drawable.placeholder_movie)
+                    .placeholder(R.drawable.ic_baseline_local_movies_24)
                     .into(posterMovie)
                 var statusFavorite = detailMovie.isFavorite
                 setStatusFavorite(statusFavorite)

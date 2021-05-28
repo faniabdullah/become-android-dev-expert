@@ -42,7 +42,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
                 Glide.with(itemView.context)
                     .load("https://image.tmdb.org/t/p/w500${data.poster}")
                     .transition(DrawableTransitionOptions.withCrossFade())
-                    .placeholder(R.drawable.placeholder_movie)
+                    .placeholder(R.drawable.ic_baseline_local_movies_24)
                     .into(posterMovie)
                 tvOverview.text = data.overview
                 tvTitle.text = data.name
