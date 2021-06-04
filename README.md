@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/faniabdullah/bangkit-final-project">
+  <a href="https://github.com/faniabdullah/become-android-dev-expert">
     <img src="https://i.imgur.com/azwt9Ab.png" width='400dp' alt="Logo" >
   </a>
 
