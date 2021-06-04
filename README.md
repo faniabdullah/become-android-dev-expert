@@ -94,27 +94,27 @@ This repository for learn About Mobile Development at <a href="https://grow.goog
     <img src="https://media.giphy.com/media/iCm7woiGuAyB40MKOu/giphy.gif"
         alt="Movie App "    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
     <img src="https://media.giphy.com/media/VA6bmaUK4LRgf1CbWZ/giphy.gif"
         alt="Dark Movie App"    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
     <img src="https://media.giphy.com/media/Cza3WtbssSA4v2ThP3/giphy.gif"
         alt="Add To Favorite"    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
     <img src="https://media.giphy.com/media/viifzylqlRI6YhaHi6/giphy.gif"
         alt="Favorite"    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
    <img src="https://media.giphy.com/media/uSIKDOa9YSOImKUkJ3/giphy.gif"
         alt="Search"    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
     <img src="https://media.giphy.com/media/UMOdV7LxNfUOqFa9Ej/giphy.gif"
         alt="Setting"    
         style="margin-right: 10px;"    
-        width="150" />
+        width="140" />
 </p>
 
 
